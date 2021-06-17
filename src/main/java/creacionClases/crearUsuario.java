@@ -77,13 +77,30 @@ public class crearUsuario {
         frmCrearUsuario.getContentPane().add(inputSurName);
         inputSurName.setColumns(10);
 
+        JLabel lblNumero = new JLabel("Numero");
+        lblNumero.setBounds(10, 158, 61, 23);
+        frmCrearUsuario.getContentPane().add(lblNumero);
+
+        JTextField inputNumber = new JTextField();
+        inputNumber.setBounds(62, 158, 106, 20);
+        frmCrearUsuario.getContentPane().add(inputNumber);
+        inputNumber.setColumns(10);
+
+        JLabel lblPlatos = new JLabel("Platos");
+        lblPlatos.setBounds(10, 192, 61, 23);
+        frmCrearUsuario.getContentPane().add(lblPlatos);
+
+        JTextField inputPlatos = new JTextField();
+        inputPlatos.setBounds(62, 192, 106, 20);
+        frmCrearUsuario.getContentPane().add(inputPlatos);
+        inputPlatos.setColumns(10);
 
 
 
 
         btnCrear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Usuario a = new Usuario(Integer.parseInt(inputAge.getText()), (inputSurName.getText()), inputName.getText());
+                Usuario a = new Usuario(Integer.parseInt(inputAge.getText()), Float.parseFloat(inputNumber.getText()), inputName.getText(), Integer.parseInt(inputPlatos.getText()), Integer.parseInt(inputSurName.getText()));
                 MainView.guardarUsuario(a);
                 frmCrearUsuario.dispose();
             }
