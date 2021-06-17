@@ -24,10 +24,10 @@ public class visualizacionView {
         initialize(clases);
     }
 
-    private void initialize(ArrayList<Object> personas) {
+    private void initialize(ArrayList<Object> clases) {
         frmViewObjets = new JFrame();
         frmViewObjets.getContentPane().setForeground(Color.GRAY);
-        frmViewObjets.setTitle("Personas App");
+        frmViewObjets.setTitle("Clasess App");
         frmViewObjets.setBounds(100, 100, 571, 373);
         frmViewObjets.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frmViewObjets.getContentPane().setLayout(null);
